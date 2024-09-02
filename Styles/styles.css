@@ -1,0 +1,127 @@
+@font-face {
+    font-family: Ubuntu;
+    src: url('../Assets/Fonts/Ubuntu/Ubuntu-Medium.ttf') format('truetype');
+}
+
+body{
+    background-color: #273040;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.header{
+    color: #FFFFFF;
+    font-family: Ubuntu;
+    font-weight: 500;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+}
+
+.board{
+    min-width: 55vh;
+    min-height: 55vh;
+    max-width: 55vh;
+    max-height: 55vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    background-color: #E7F0FE;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); 
+    grid-template-rows: repeat(7, 1fr);   
+}
+
+.circle {
+    width: 80%;
+    height: 80%;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #273040;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 35vw;
+    font-size: x-large;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #E7F0FE;
+    border-radius: 30px;
+    width: 80%;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #273040;
+    color: #E7F0FE;
+    border: 1px solid #E7F0FE;
+    border-radius: 20px;
+}
+button:hover {
+    background-color: #E7F0FE;
+    color: #273040;
+    border-color: #273040;
+}
+
+.footer h1{
+    color: #FFFFFF;
+    font-family: Ubuntu;
+    font-weight: 500;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+}
+
+.footer .rules ul li{
+    color: #FFFFFF;
+    font-family: 'inter';
+    font-weight: 500;
+    font-size: larger;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .header{
+        margin-left: 0px;
+        margin-right: 0px;
+        font-size: small;
+    }
+    .board{
+        min-width: 35vh;
+        min-height: 35vh;
+        max-width: 35vh;
+        max-height: 35vh;
+    }
+    .modal-content {
+        max-width: 80vw;
+    }
+    
+}
