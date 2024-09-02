@@ -7,10 +7,7 @@ Welcome to the Connect Four game project! This project is designed to teach you 
 - [Project Overview](#project-overview)
 - [Features](#features)
 - [Getting Started](#getting-started)
-- [Technologies Used](#technologies-used)
-- [How It Works](#how-it-works)
-- [Contributing](#contributing)
-- [License](#license)
+- [Demo](#demo)
 
 ## Project Overview
 
