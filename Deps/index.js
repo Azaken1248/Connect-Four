@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             //div.innerHTML = `(${i},${j})`;
             states[i][j] = null; 
             div.style.border = '1px solid black';
-            div.style.padding = '10px';
+            div.style.padding = '10%';
             div.dataset.row = i;
             div.dataset.col = j;
             div.addEventListener('click', handleColumnClick);  
