@@ -3,15 +3,15 @@
     src: url('../Assets/Fonts/Ubuntu/Ubuntu-Medium.ttf') format('truetype');
 }
 
-body{
+body {
     background-color: #273040;
     display: flex;
     flex-direction: column;
+    color: #ffffff;
 
 }
 
-.header{
-    color: #FFFFFF;
+.header {
     font-family: Ubuntu;
     font-weight: 500;
     margin-left: auto;
@@ -20,7 +20,7 @@ body{
 }
 
 .board {
-    position: relative; 
+    position: relative;
     min-width: 55vh;
     min-height: 55vh;
     max-width: 55vh;
@@ -30,18 +30,19 @@ body{
     margin-bottom: 3rem;
     background-color: #E7F0FE;
     display: grid;
-    grid-template-columns: repeat(7, 1fr); 
+    grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(7, 1fr);
 }
 
-.board::before, .board::after {
+.board::before,
+.board::after {
     content: "";
     position: absolute;
-    max-width: 2%; 
+    max-width: 2%;
     max-height: 2%;
-    min-width: 2%; 
+    min-width: 2%;
     min-height: 2%;
-    border: 1px solid #000000; 
+    border: 1px solid #000000;
     background-color: #E7F0FE;
     border: 1px solid #000000;
     margin: -2%;
@@ -50,17 +51,18 @@ body{
 .board::before {
     top: 0;
     left: 0;
-    border: 2px solid #000000; 
+    border: 2px solid #000000;
     margin: -2%;
 }
 
 .board::after {
     bottom: 0;
     right: 0;
-    border: 2px solid #000000; 
+    border: 2px solid #000000;
 }
 
-.board .corner-top-right, .board .corner-bottom-left {
+.board .corner-top-right,
+.board .corner-bottom-left {
     position: absolute;
     width: 2%;
     height: 2%;
@@ -79,6 +81,12 @@ body{
     left: 0;
     margin: -2%;
 }
+
+.small-div {
+    border: 1px solid black;
+    padding: 10%;
+}
+
 .circle {
     width: 80%;
     height: 80%;
@@ -88,16 +96,16 @@ body{
 }
 
 .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
@@ -119,23 +127,23 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     background-color: #273040;
-    color: #E7F0FE;
     border: 1px solid #E7F0FE;
+    color: #ffffff;
     border-radius: 20px;
 }
+
 button:hover {
     background-color: #E7F0FE;
     color: #273040;
     border-color: #273040;
 }
 
-.footer{
+.footer {
     padding: 1.2rem;
     margin-bottom: 2rem;
 }
 
-.footer h1{
-    color: #FFFFFF;
+.footer h1 {
     font-family: Ubuntu;
     font-weight: 500;
     margin-left: auto;
@@ -143,8 +151,7 @@ button:hover {
     margin-top: 3rem;
 }
 
-.footer .rules ul li{
-    color: #FFFFFF;
+.footer .rules ul li {
     font-family: 'inter';
     font-weight: 500;
     font-size: larger;
@@ -154,25 +161,28 @@ button:hover {
 }
 
 @media screen and (max-width: 600px) {
-    body{
+    body {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    .header{
+
+    .header {
         margin-left: 0px;
         margin-right: 0px;
         font-size: small;
     }
-    .board{
+
+    .board {
         min-width: 35vh;
         min-height: 35vh;
         max-width: 35vh;
         max-height: 35vh;
     }
+
     .modal-content {
         max-width: 80vw;
     }
-    
+
 }
